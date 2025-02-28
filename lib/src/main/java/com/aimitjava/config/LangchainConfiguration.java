@@ -1,8 +1,23 @@
 package com.aimitjava.config;
 
 public class LangchainConfiguration extends Configuration{
+    public LangchainConfiguration() {
+        super();
+    }
+
+    public static Configuration getInstance() {
+        if (instance == null) {
+            instance = new LangchainConfiguration();
+        }
+        return instance;
+    }
+
     public LangchainConfiguration(String propertiesFile) {
         super(propertiesFile);
+    }
+
+    public LangchainConfiguration(String propertiesFile, EnvironmentProvider environmentProvider) {
+        super(propertiesFile, environmentProvider);
     }
 
     public String getOpenAiApiKey() {

@@ -10,7 +10,7 @@ import java.util.Properties;
  */
 public class Configuration {
     private static final String DEFAULT_PROPERTIES_FILE = "application.properties";
-    private static Configuration instance;
+    protected static Configuration instance;
     protected final Properties properties;
     protected final EnvironmentProvider environmentProvider;
     private final String propertiesFile;
@@ -18,7 +18,7 @@ public class Configuration {
     /**
      * Creates a Configuration instance with default properties file.
      */
-    private Configuration() {
+    protected Configuration() {
         this(DEFAULT_PROPERTIES_FILE, EnvironmentProvider.getInstance());
     }
 
