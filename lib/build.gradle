@@ -12,7 +12,7 @@ plugins {
 }
 
 group = 'com.aimitjava'
-version = '1.0.0'
+version = '1.1.0'
 archivesBaseName = 'config-module'  // Setzt den Namen des JAR-Files
 
 repositories {
